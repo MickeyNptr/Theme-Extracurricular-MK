@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="{{ settings.color_body_bg }}">
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+
+    <title>{{ shop.name }} - {{ page_title }}</title>
+
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    {{ 'global.css' | asset_url | stylesheet_tag }}
+    {{ 'theme.css' | asset_url | stylesheet_tag }}
+
+    {%- if settings.favicon != blank -%}
+      <link rel="shortcut icon" href="{{ settings.favicon | image_url: width: 32, height: 32 }}" type="image/png">
+    {%- endif -%}
+
+    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+    {{ content_for_header }}
+  </head>
+
+  <body>
+    <div class="page-container">
+      <header class="site-header">
+        <div class="site-header__wrapper">
+          <h1 class="site-header__title">
+            <a href="{{ routes.root_url }}">EXTRACURRICULAR</a>
+          </h1>
+          <nav class="site-header__nav">
+            <ul>
+              <li><a href="{{ routes.all_products_collection_url }}">Shop</a></li>
+              <li><a href="/pages/our-story">Our Story</a></li>
+              <li><a href="/pages/stockist">Stockist</a></li>
+              <li><a href="/pages/contact-us">Contact Us</a></li>
+            </ul>
+          </nav>
+          <div class="site-header__icons">
+            <a href="{{ routes.cart_url }}">Cart</a>
+          </div>
+        </div>
+      </header>
+
+      <main class="main-content">
+        {{ content_for_layout }}
+      </main>
+
+      <footer class="site-footer">
+        <div class="site-footer__wrapper">
+          <p>&copy; {{ 'now' | date: '%Y' }}, EXTRACURRICULAR</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

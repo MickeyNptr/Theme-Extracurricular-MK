@@ -1,0 +1,21 @@
+<div class="product">
+  <h1>{{ product.title }}</h1>
+  <img src="{{ product.featured_image | img_url: 'large' }}" alt="{{ product.title }}">
+  <p class="price">{{ product.price | money }}</p>
+  <p>{{ product.description }}</p>
+
+  {% form 'product', product %}
+    {% if product.variants.size > 1 %}
+      <label for="variant">Select Variant:</label>
+      <select name="id" id="variant">
+        {% for variant in product.variants %}
+          <option value="{{ variant.id }}">{{ variant.title }} - {{ variant.price | money }}</option>
+        {% endfor %}
+      </select>
+    {% else %}
+      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+    {% endif %}
+
+    <button type="submit">Add to Cart</button>
+  {% endform %}
+</div>
