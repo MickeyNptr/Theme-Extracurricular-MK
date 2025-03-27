@@ -1,0 +1,69 @@
+[
+  {
+    "name": "General",
+    "settings": [
+      {
+        "id": "favicon",
+        "type": "image_picker",
+        "label": "Favicon"
+      },
+      {
+        "id": "color_body_bg",
+        "type": "color",
+        "label": "Body Background Color",
+        "default": "#fff"
+      },
+      {
+        "id": "color_text",
+        "type": "color",
+        "label": "Text Color",
+        "default": "#000"
+      },
+      {
+        "id": "color_link",
+        "type": "color",
+        "label": "Link Color",
+        "default": "#000"
+      },
+      {
+        "id": "color_border",
+        "type": "color",
+        "label": "Border Color",
+        "default": "#ddd"
+      },
+      {
+        "id": "font_body",
+        "type": "font_picker",
+        "label": "Body Font",
+        "default": "sans-serif"
+      }
+    ]
+  },
+  {
+    "name": "Header",
+    "settings": [
+      {
+        "id": "header_title",
+        "type": "text",
+        "label": "Header Title",
+        "default": "EXTRACURRICULAR"
+      },
+      {
+        "id": "main_menu",
+        "type": "link_list",
+        "label": "Main Menu"
+      }
+    ]
+  },
+  {
+    "name": "Footer",
+    "settings": [
+      {
+        "id": "footer_text",
+        "type": "text",
+        "label": "Footer Text",
+        "default": "EXTRACURRICULAR"
+      }
+    ]
+  }
+]

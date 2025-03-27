@@ -1,0 +1,19 @@
+<footer class="site-footer">
+  <div class="site-footer__wrapper">
+    <p>&copy; {{ 'now' | date: '%Y' }}, {{ settings.footer_text }}</p>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer",
+  "settings": [
+    {
+      "id": "footer_text",
+      "type": "text",
+      "label": "Footer Text",
+      "default": "EXTRACURRICULAR"
+    }
+  ]
+}
+{% endschema %}

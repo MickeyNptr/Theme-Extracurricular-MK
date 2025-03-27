@@ -1,0 +1,42 @@
+<header class="site-header">
+  <div class="site-header__wrapper">
+    <h1 class="site-header__title">
+      <a href="{{ routes.root_url }}">
+        {{ settings.header_title }}
+      </a>
+    </h1>
+    <nav class="site-header__nav">
+      <ul>
+        {% for link in linklists[settings.main_menu].links %}
+          <li>
+            <a href="{{ link.url }}">
+              {{ link.title }}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <div class="site-header__icons">
+      <a href="{{ routes.cart_url }}">Cart</a>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "settings": [
+    {
+      "id": "header_title",
+      "type": "text",
+      "label": "Header Title",
+      "default": "EXTRACURRICULAR"
+    },
+    {
+      "id": "main_menu",
+      "type": "link_list",
+      "label": "Main Menu"
+    }
+  ]
+}
+{% endschema %}

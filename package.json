@@ -1,20 +1,16 @@
 {
   "name": "extracurricular-theme",
   "version": "1.0.0",
-  "description": "Shopify theme for Extracurricular clothing brand",
+  "description": "A Shopify theme for Extracurricular clothing brand.",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "shopify": "shopify theme dev"
+    "preview": "vite preview"
   },
   "dependencies": {
     "vite": "^4.0.0"
   },
   "devDependencies": {
-    "sass": "^1.62.0",
-    "@shopify/prettier-plugin-liquid": "latest",
-    "prettier": "latest",
-    "@shopify/theme-check-node": "^1.15.0"
+    "sass": "^1.62.0"
   }
 }
